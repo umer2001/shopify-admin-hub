@@ -14,11 +14,11 @@ const Index = () => {
             <h1 className="text-3xl font-bold">Dashboard</h1>
             <SidebarTrigger />
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
             <MetricCard
               title="Total Revenue"
-              value="$45,231.89"
+              value="$50,231.89"
               icon={<DollarSign className="h-4 w-4 text-gray-500" />}
               trend={{ value: "+20.1%", positive: true }}
             />
@@ -41,7 +41,7 @@ const Index = () => {
               trend={{ value: "+2.1%", positive: true }}
             />
           </div>
-          
+
           <RevenueChart />
         </main>
       </div>
