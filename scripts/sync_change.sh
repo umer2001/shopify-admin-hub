@@ -14,6 +14,7 @@
 # Path to downloaded Bolt.new code
 BOLT_CODE_DIR="downloaded"
 PROJECT_DIR="."
+DEVELOPER=$(git config user.name)
 
 # Move to the local Git repository
 cd $PROJECT_DIR || { echo "Project directory not found"; exit 1; }
@@ -30,8 +31,8 @@ CURRENT_BRANCH=$(git branch --show-current)
 echo "Pulling latest changes from GitHub..."
 git pull
 
-# create a new branch with name of the current date and time
-BRANCH_NAME=$(date +"%Y-%m-%d-%H")
+# create a new branch with name of the current developer and date and time
+BRANCH_NAME="$DEVELOPER-$(date +'%Y-%m-%d-%H')"
 echo "Creating new branch $BRANCH_NAME..."
 git checkout -b $BRANCH_NAME
 
